@@ -3,34 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DSA Problems</title>
+    <title>Dynamic iFrame Loader</title>
     <style>
-        /* Add basic styling */
         body {
+            display: flex;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
+            height: 100vh;
         }
-
-        /* Styling for the background image */
-        .background {
-            background-image: url('background.jpg'); /* Replace with your image URL */
-            background-size: cover; /* Ensures the image covers the whole section */
-            background-position: center; /* Centers the image */
-            height: 100vh; /* Makes it full viewport height */
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        .sidebar {
+            width: 20%;
+            background-color: #f0f0f0;
+            padding: 10px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            overflow-y: auto;
         }
-
-        /* Styling for the header */
-        .header {
-            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-            color: white;
-            padding: 20px 40px;
-            border-radius: 10px;
-            text-align: center;
-            font-size: 2em;
+        .sidebar a {
+            display: block;
+            padding: 10px;
+            color: #333;
+            text-decoration: none;
+            margin-bottom: 5px;
+            border-radius: 4px;
+        }
+        .sidebar a:hover {
+            background-color: #ddd;
+        }
+        .iframe-container {
+            flex: 1;
+            padding: 10px;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
         }
     </style>
 </head>
