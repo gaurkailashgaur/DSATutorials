@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic iFrame Loader</title>
+    <style>
+        body {
+            display: flex;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+        }
+        .sidebar {
+            width: 20%;
+            background-color: #f0f0f0;
+            padding: 10px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            overflow-y: auto;
+        }
+        .sidebar a {
+            display: block;
+            padding: 10px;
+            color: #333;
+            text-decoration: none;
+            margin-bottom: 5px;
+            border-radius: 4px;
+        }
+        .sidebar a:hover {
+            background-color: #ddd;
+        }
+        .iframe-container {
+            flex: 1;
+            padding: 10px;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar with links -->
+    <div class="sidebar">
+        <a href="#" onclick="loadDoc('https://docs.google.com/document/d/1qmyhLNKU2HHRMZv6DsGIeD7JtumxYFYT57d3gyNhhRc/preview')">Good pair</a>
+        <a href="#" onclick="loadDoc('https://docs.google.com/document/d/1pNWL7Hnr2JV1pWIk0zYqegx2lqc0WeDfhzXhaIzHjXg/preview')">Reverse in Range</a>
+        <a href="#" onclick="loadDoc('https://docs.google.com/document/d/12UnG5nl2OvpHyVZpnowsepwJXn1SilEe3ZX6xUhvgBY/preview')">Count Factor 2</a>
+<a href="#" onclick="loadDoc('https://docs.google.com/document/d/1F06406ClpAiSMgDlNqR27z1f9q0Wm95gHMRU3kEhePw/preview')">Find Perfect Numbers</a>
+<a href="#" onclick="loadDoc('https://docs.google.com/document/d/1jPKNH3eM9QOKbaLS3bZYnUIP6k8PWucir8HCqya3J70/preview')">isPrime</a>
+    </div>
+
+    <!-- iFrame container -->
+    <div class="iframe-container">
+        <iframe id="docViewer" src="https://docs.google.com/document/d/1qmyhLNKU2HHRMZv6DsGIeD7JtumxYFYT57d3gyNhhRc/preview"></iframe>
+    </div>
+
+    <script>
+        // Function to load the selected document in the iFrame
+        function loadDoc(url) {
+            document.getElementById('docViewer').src = url;
+        }
+    </script>
+</body>
+</html>
